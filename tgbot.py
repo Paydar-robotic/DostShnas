@@ -22,7 +22,7 @@ os.system("figlet special team")
 time.sleep(int(3))
 clear()
 bot = telebot.TeleBot("590187747:AAH5FRiSExUDXylErmJoTKRkZj95lDwVmIo")
-user = bot.get_me(DostShnas_Bot)
+user = bot.get_me("DostShnas_Bot")
 botname = user.username
 print " @{} started on {}".format(botname,start_time)
 channel = "@RedLine_Joke"
