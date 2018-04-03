@@ -22,9 +22,9 @@ os.system("figlet special team")
 time.sleep(int(3))
 clear()
 bot = telebot.TeleBot("590187747:AAH5FRiSExUDXylErmJoTKRkZj95lDwVmIo")
-user = bot.get_me("DostShnas_Bot")
+user = bot.get_me()
 botname = user.username
-print " @{} started on {}".format(botname,start_time)
+print " @{DostShnas_Bot} started on {}".format(botname,start_time)
 channel = "@RedLine_Joke"
 sudo = {"104657260"}
 def is_sudo(user):
