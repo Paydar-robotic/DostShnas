@@ -21,12 +21,12 @@ start_time = str(strftime("%Y-%m-%d %H:%M:%S", gmtime()))
 os.system("figlet special team")
 time.sleep(int(3))
 clear()
-bot = telebot.TeleBot("Token")
+bot = telebot.TeleBot("590187747:AAH5FRiSExUDXylErmJoTKRkZj95lDwVmIo")
 user = bot.get_me()
 botname = user.username
 print " @{} started on {}".format(botname,start_time)
-channel = "@ user name channel"
-sudo = {"123755887"}
+channel = "@RedLine_Joke"
+sudo = {"104657260"}
 def is_sudo(user):
     for i in sudo:
         if int(user) == int(i):
@@ -45,7 +45,7 @@ def send_something(message):
     if bot.get_chat_member(channel, message.from_user.id).status == "left" or bot.get_chat_member(channel, message.from_user.id).status == "kicked":
         mk = '''
 شما ابتدا باید در کانال ما عضو شوید:
-> @special_programming <
+> @RedLine_Joke <
 پس از عضویت در کانال میتوانید ازین دکمه استفاده نمایید😀❤️👌
         '''
         bot.reply_to(message, mk)
@@ -206,7 +206,7 @@ def prc_5(message):
         mk = '''
 شما یک پیام جدید از طرف دوستتان دریافت کردید😍❤️.
 برای دیدن پیام ابتدا در کانال
-@special_programming
+@RedLine_Joke
 عضو بشید😅
 سپس میتونید با دکمه:
 😬 نمایش کل تست ها
