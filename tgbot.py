@@ -23,7 +23,7 @@ time.sleep(int(3))
 clear()
 bot = telebot.TeleBot("590187747:AAH5FRiSExUDXylErmJoTKRkZj95lDwVmIo")
 user = bot.get_me()
-botname = user.username
+botname = user.DostShnas_Bot
 print " @{} started on {}".format(botname,start_time)
 channel = "@RedLine_Joke"
 sudo = {"104657260"}
