@@ -67,7 +67,7 @@ def send_something(message):
     loll = '''
 لینک مخصوص شما برای اینکه بدونی  دوستات چقدر میشناسننت ؟ چه حسی بهت دارن و چی تو دلشون مونده که یهت بگن ؟ چه جنبه از شخصیتتو دوس دارن و ... ؟ رو در پیام پایین برات ساختم 🙏😍
 میتونی اون لینکو یا کل پیام رو برای دوستات فوروارد کنی یا توی اینستا و... به اشتراک بذاری تا دوستات بتونن در مورد تو پرسشنامه رو پر کنند  👌
-⭕️به محض اینکه هر دوستیت برات پرسشنامه رو پر کرد میتونی برات همه ی جواب هایی که داده رو ارسال میکنم (برای اینکه فرستنده تست ها رو ببینی  لطفا داخل کانال ما عضو شو 👈 @special_programming )
+⭕️به محض اینکه هر دوستیت برات پرسشنامه رو پر کرد میتونی برات همه ی جواب هایی که داده رو ارسال میکنم (برای اینکه فرستنده تست ها رو ببینی  لطفا داخل کانال ما عضو شو 👈 @RedLine_Joke  )
     '''
     lll = '''
     سلام دوست من 😊 خوبی ؟ 🙏
@@ -239,7 +239,7 @@ def send_something(message):
     bot.send_message(message.from_user.id, st, reply_markup=markup)
 @bot.message_handler(func=lambda msg: msg.text.encode("utf-8") == "😍 عضویت در کانال")
 def send_something(message):
-    bot.reply_to(message, "join @special_programming (:")
+    bot.reply_to(message, "join @RedLine_Joke  (:")
 
 @bot.message_handler(func=lambda msg: msg.text.encode("utf-8") == "😍 برو بریم")
 def send_something(message):
@@ -294,7 +294,7 @@ https://telegram.me/{}?start={}
 @bot.message_handler(regexp="^(/start) (.*)")
 def handle_message(message):
     text = message.text.split()[1]
-    redis.sadd("porsmanbot",message.from_user.id)
+    redis.sadd("@PaydarTeamSupportBot",message.from_user.id)
     if redis.get("sabtshode{}{}".format(message.from_user.id,text)) == "ok":
         frn = redis.get("name{}".format(text))
         mnm = '''
@@ -339,15 +339,15 @@ def handle_message(message):
 @bot.message_handler(commands=['stats'])
 def send_welcome(message):
     if is_sudo(message.from_user.id):
-        bot.reply_to(message, redis.scard("porsmanbot"))
+        bot.reply_to(message, redis.scard("@PaydarTeamSupportBot"))
     else:
         bot.reply_to(message, "siktir |:")
 @bot.message_handler(commands=['bc'])
 def send_welcome(message):
     if is_sudo(message.from_user.id):
         text = message.text.split()[1]
-        bchash = redis.smembers("porsmanbot")
-        bot.send_message(123755887, "starting to broadcast to all bot users")
+        bchash = redis.smembers("@PaydarTeamSupportBot")
+        bot.send_message(104657260, "starting to broadcast to all bot users")
         try:
             for i in bchash:
                 bot.send_message(i, text)
